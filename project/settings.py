@@ -29,7 +29,9 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'some-crazy-secret')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "True").lower() in ("true", "1", "yes")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+   "0.0.0.0", "distanceapi-ekvz.onrender.com"
+]
 HOST = os.environ.get('HOST')
 if HOST:
     ALLOWED_HOSTS.append(HOST)
